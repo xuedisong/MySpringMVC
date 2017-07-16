@@ -3,4 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <servlet>
+        <servlet-name>AnnotionHandleServlet</servlet-name>
+        <servlet-class>me.yeliang.web.controller.AnnotationHandleServlet</servlet-class>
+        <init-param>
+            <param-name>basePackage</param-name>
+            <param-value>me.yeliang.web.controller,me.yeliang.UI</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AnnotionHandleServlet</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
 </web-app>
